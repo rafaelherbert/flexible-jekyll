@@ -25,7 +25,7 @@ print_hi('Tom')
 {% endhighlight %}
 
 ### Image
-![My helpful screenshot]({{ "/assets/img/123.jpg" | absolute_url }})
+![My helpful screenshot]({{ "/assets/img/laravel.jpg" | absolute_url }})
 
 ### Lists
 - 1
