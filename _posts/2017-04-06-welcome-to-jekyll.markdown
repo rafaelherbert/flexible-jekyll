@@ -8,16 +8,13 @@ img: 123.jpg
 # Ultimate guide to static post developing
 ### Default Style
 
-Bold: **Example**
-
-Italic: *Example*
-
-Bold-Italic: **_Example_**
-
+Bold: **Example** <br>
+Italic: *Example* <br>
+Bold-Italic: **_Example_** <br>
 Marked: `Example`
 
 ### Code Sintax Highlight
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def print_hi(name)
   puts "Hi, #{name}"
 end
