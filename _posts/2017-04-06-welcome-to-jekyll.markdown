@@ -14,7 +14,7 @@ Bold-Italic: **_Example_** <br>
 Marked: `Example`
 
 ### Code Sintax Highlight
-{% highlight ruby linenos %}
+{% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
 end
