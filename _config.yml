@@ -7,6 +7,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rafaelherbert.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
+
 # Author Settings
 page-img: rh.jpg
 author: Rafael Herbert # add your name
