@@ -8,9 +8,9 @@ url: "https://rafaelherbert.github.io" # the base hostname & protocol for your s
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
+page-img: rh.jpg
 author: Rafael Herbert # add your name
 author-img: rafael-herbert.jpg # add your photo
-page-img: rh.jpg
 about-author: Técnico em Informática e dedicado estudante universitário em Sistemas de Informação na Universidade Federal Fluminense # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
