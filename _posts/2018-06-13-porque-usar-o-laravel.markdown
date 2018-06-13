@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Porque usar o Laravel"
-date: 2018-06-12
+date: 2018-06-13
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
 img: laravel.jpg # (Optional)
 fig-caption: laravel framework # (Optional)
