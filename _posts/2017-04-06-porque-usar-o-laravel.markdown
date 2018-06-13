@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
+title: "Porque usar o Laravel"
 date: 2018-06-12
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
-img: 123.jpg # (Optional)
-fig-caption: intel driver # (Optional)
-tags: [thisone, otherone, cool] # (Optional)
+img: laravel.jpg # (Optional)
+fig-caption: laravel framework # (Optional)
+tags: [laravel, vue] # (Optional)
 ---
 # Ultimate guide to static post developing
 ### Default Style
