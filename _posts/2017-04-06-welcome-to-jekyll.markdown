@@ -7,9 +7,13 @@ img: 123.jpg
 ---
 # Ultimate guide to static post developing
 ### Default Style
+
 Bold: **Example**
+
 Italic: *Example*
+
 Bold-Italic: **_Example_**
+
 Marked: `Example`
 
 ### Code Sintax Highlight
