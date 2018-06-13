@@ -4,7 +4,7 @@ title: "Welcome to Jekyll!"
 date: 2018-06-12
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
 img: 123.jpg # (Optional)
-figcaption: intel driver # (Optional)
+fig-caption: intel driver # (Optional)
 tags: [thisone, otherone, cool] # (Optional)
 ---
 # Ultimate guide to static post developing
