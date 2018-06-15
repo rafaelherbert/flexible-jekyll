@@ -7,7 +7,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rafaelherbert.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 page-img: rh.jpg #website og-image
-keywords: rafael,herbert,developer,rafael herbert,sistemas de informacao,universidade federal fluminense, desenvolvedor
+keywords: rafael,herbert,rafael herbert,sistemas de informacao,universidade federal fluminense, desenvolvedor
 
 # Author Settings
 author: Rafael Herbert # add your name
