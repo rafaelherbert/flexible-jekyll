@@ -1,13 +1,39 @@
 ---
 layout: post
 title: "Arvores binárias em C"
-date: 2018-06-13
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
+date: 2018-06-18
+description: Conceito e aplicação de árvores binárias na linguagem C.
 img: c.jpg # (Optional)
 fig-caption: C Programming Language # (Optional)
 tags: [C, binary trees] # (Optional)
 ---
-# Ultimate guide to static post developing
+
+As árvores binárias são uma estrutura de dados de uma quantidade finita de elementos onde o primeiro nó é chamado de **Raiz**, e os outros nós são divididos em subconjuntos distintos, onde cada um forma uma árvore binária. Cada elemento é um **Nó (ou vértice)**.
+
+### Terminologia
+- Pai
+  - Todo nó que possui um ou mais sucessores.
+- Filho
+  - Todo nó que possui um antecessor imediato.
+- Irmãos
+  - Filhos de um mesmo pai.
+- Pais com pelo menos um filho
+  - Não terminais ou internos.
+- Caminho
+  - Uma lista de nós distintos e sucessivos conectados através da árvore.
+- Nó Raiz
+  - O Nó no qual partem todos os caminhos da árvore.
+
+### Propriedades
+- Grau de um nó
+  - É o número de filhos de um nó.
+- Nível de um nó
+  - Número de nós no caminho entre o nó e a raiz. (A raiz possui índice 0).
+- Altura da árvore
+  - Corresponde ao nó com o maior nível.
+
+
+<!-- # Ultimate guide to static post developing
 ### Default Style
 
 Bold: **Example** <br>
@@ -47,4 +73,4 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+[jekyll-talk]: https://talk.jekyllrb.com/ -->
