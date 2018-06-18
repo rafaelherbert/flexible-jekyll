@@ -34,6 +34,16 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 
 ## Operações em árvores binárias
 
+#### Estrutura do nó da árvore binária
+{% highlight c %}
+typedef struct node {
+  int dado;
+  struct node *esq;
+ 	struct node *dir;
+	struct node *pai;
+} Node;
+{% endhighlight %}
+
 #### esquerda(raiz)
 ##### Retorna o ponteiro que aponta para o filho à esquerda.
 {% highlight c %}
@@ -46,6 +56,61 @@ Node* esquerda(Node *raiz){
 	return aux;
 }
 {% endhighlight %}
+
+#### direita(raiz)
+##### Retorna o ponteiro que aponta para o filho à direita.
+{% highlight c %}
+Node* esquerda(Node *raiz){
+	Node *aux = raiz;
+	if (aux->dir != NULL)
+		aux = aux->dir;
+	else
+		return NULL;
+	return aux;
+}
+{% endhighlight %}
+
+#### pai(raiz)
+##### Retorna o ponteiro que aponta para o pai do nó inserido.
+{% highlight c %}
+Node* esquerda(Node *raiz){
+	Node *aux = raiz;
+	if (aux->pai != NULL)
+		aux = aux->pai;
+	else
+		return NULL;
+	return aux;
+}
+{% endhighlight %}
+
+
+#### `esquerda(raiz)`
+##### Retorna o ponteiro que aponta para o filho à esquerda.
+{% highlight c %}
+Node* esquerda(Node *raiz){
+	Node *aux = raiz;
+	if (aux->esq != NULL)
+		aux = aux->esq;
+	else
+		return NULL;
+	return aux;
+}
+{% endhighlight %}
+
+
+#### esquerda(raiz)
+##### Retorna o ponteiro que aponta para o filho à esquerda.
+{% highlight c %}
+Node* esquerda(Node *raiz){
+	Node *aux = raiz;
+	if (aux->esq != NULL)
+		aux = aux->esq;
+	else
+		return NULL;
+	return aux;
+}
+{% endhighlight %}
+
 
 
 
