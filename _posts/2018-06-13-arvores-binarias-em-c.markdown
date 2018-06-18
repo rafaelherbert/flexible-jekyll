@@ -10,7 +10,7 @@ tags: [C, binary trees] # (Optional)
 
 As árvores binárias são uma estrutura de dados de uma quantidade finita de elementos onde o primeiro nó é chamado de **Raiz**, e os outros nós são divididos em subconjuntos distintos, onde cada um forma uma árvore binária. Cada elemento é um **Nó (ou vértice)**.
 
-### Terminologia
+## Terminologia
 - Pai
   - Todo nó que possui um ou mais sucessores.
 - Filho
@@ -24,7 +24,7 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 - Nó Raiz
   - O Nó no qual partem todos os caminhos da árvore.
 
-### Propriedades
+## Propriedades
 - Grau de um nó
   - É o número de filhos de um nó.
 - Nível de um nó
@@ -36,14 +36,14 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 
 #### esquerda(raiz)
 {% highlight c %}
-	Node* esquerda(Node *raiz){
-		Node *aux = raiz;
-		if (aux->esq != NULL)
-			aux = aux->esq;
-		else
-			return NULL;
-		return aux;
-	}
+Node* esquerda(Node *raiz){
+	Node *aux = raiz;
+	if (aux->esq != NULL)
+		aux = aux->esq;
+	else
+		return NULL;
+	return aux;
+}
 {% endhighlight %}
 
 <!-- # Ultimate guide to static post developing
