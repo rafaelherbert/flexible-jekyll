@@ -35,6 +35,7 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 ## Operações em árvores binárias
 
 #### esquerda(raiz)
+##### Retorna o ponteiro que aponta para o filho à esquerda.
 {% highlight c %}
 Node* esquerda(Node *raiz){
 	Node *aux = raiz;
@@ -45,6 +46,9 @@ Node* esquerda(Node *raiz){
 	return aux;
 }
 {% endhighlight %}
+
+
+
 
 <!-- # Ultimate guide to static post developing
 ### Default Style
