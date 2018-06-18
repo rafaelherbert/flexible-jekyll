@@ -161,10 +161,44 @@ int filhoDir(Node *raiz, int dado){
 {% endhighlight %}
 
 
+## Percorrendo árvores binárias
 
+Existem 3 diferentes métodos para percorrer uma árvore binária:
+1. Visitar a raiz, depois a subárvore da esquerda, e logo após a subárvore da direita. `(Pré ordem)`
+2. Visitar a subárvore da esquerda, depois a raiz, depois a subárvore da direita. `(Em ordem)`
+3. Visitar as subárvores da esquerda e direita, e depois visitar a raiz. `(Pós ordem)`
 
+Vamos ver como esses códigos seriam implementados:
 
+#### pre_ordem(raiz)
+{% highlight c %}
+void pre_ordem(Node *raiz){
+	if (raiz == NULL) return;
+	printf("{%d}\n", raiz->dado);
+	pre_ordem(raiz->esq);
+	pre_ordem(raiz->dir);
+}
+{% endhighlight %}
 
+#### em_ordem(raiz)
+{% highlight c %}
+void em_ordem(Node *raiz){
+	if (raiz == NULL) return;
+	pre_ordem(raiz->esq);
+	printf("{%d}\n", raiz->dado);
+	pre_ordem(raiz->dir);
+}
+{% endhighlight %}
+
+#### pos_ordem(raiz)
+{% highlight c %}
+void pos_ordem(Node *raiz){
+	if (raiz == NULL) return;
+	pre_ordem(raiz->esq);
+	pre_ordem(raiz->dir);
+	printf("{%d}\n", raiz->dado);
+}
+{% endhighlight %}
 <!-- # Ultimate guide to static post developing
 ### Default Style
 
