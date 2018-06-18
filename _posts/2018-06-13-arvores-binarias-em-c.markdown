@@ -32,6 +32,19 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 - Altura da árvore
   - Corresponde ao nó com o maior nível.
 
+## Operações em árvores binárias
+
+#### esquerda(raiz)
+{% highlight c %}
+	Node* esquerda(Node *raiz){
+		Node *aux = raiz;
+		if (aux->esq != NULL)
+			aux = aux->esq;
+		else
+			return NULL;
+		return aux;
+	}
+{% endhighlight %}
 
 <!-- # Ultimate guide to static post developing
 ### Default Style
