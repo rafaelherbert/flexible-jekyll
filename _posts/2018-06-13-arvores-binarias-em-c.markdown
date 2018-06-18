@@ -37,8 +37,8 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 #### Estrutura do nó da árvore binária
 {% highlight c %}
 typedef struct node {
-  int dado;
-  struct node *esq;
+  	int dado;
+  	struct node *esq;
  	struct node *dir;
 	struct node *pai;
 } Node;
@@ -85,7 +85,7 @@ Node* esquerda(Node *raiz){
 
 
 #### irmao(raiz)
-##### `Retorna o ponteiro que aponta para o irmão do nó inserido`
+##### Retorna o ponteiro que aponta para o irmão do nó inserido
 {% highlight c %}
 Node* irmao(Node *raiz){
 	Node *aux = raiz;
@@ -129,6 +129,37 @@ Node* criaAB(int dado)
 	return node;
 }
 {% endhighlight %}
+
+#### filhoEsq(raiz)
+##### Cria um filho à esquerda do nó inserido, retorna 1 se conseguir e 0 se falhar.
+{% highlight c %}
+int filhoDir(Node *raiz, int dado){
+	Node *node = criaAB(dado);
+	if (raiz->esq == NULL){
+		raiz->esq = node;
+		raiz->esq->pai = raiz;
+		return 1;
+	} else {
+		return 0;
+	}
+}
+{% endhighlight %}
+
+#### filhoDir(raiz)
+##### Cria um filho à direita do nó inserido, retorna 1 se conseguir e 0 se falhar.
+{% highlight c %}
+int filhoDir(Node *raiz, int dado){
+	Node *node = criaAB(dado);
+	if (raiz->dir == NULL){
+		raiz->dir = node;
+		raiz->dir->pai = raiz;
+		return 1;
+	} else {
+		return 0;
+	}
+}
+{% endhighlight %}
+
 
 
 
