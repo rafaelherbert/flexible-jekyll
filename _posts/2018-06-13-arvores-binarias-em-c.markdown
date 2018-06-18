@@ -199,6 +199,11 @@ void pos_ordem(Node *raiz){
 	printf("{%d}\n", raiz->dado);
 }
 {% endhighlight %}
+
+
+ Para ilustrar o funcionamento desse algoritmo, vamos observar o comportamento do seu retorno quando aplicado a seguinte árvore binária:
+ ![Arvores binárias exemplo 1]({{ "/assets/img/bt_example_1.jpg" | absolute_url }})
+
 <!-- # Ultimate guide to static post developing
 ### Default Style
 
