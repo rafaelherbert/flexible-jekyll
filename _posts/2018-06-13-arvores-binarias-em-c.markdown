@@ -84,30 +84,49 @@ Node* esquerda(Node *raiz){
 {% endhighlight %}
 
 
-#### `esquerda(raiz)`
-##### Retorna o ponteiro que aponta para o filho à esquerda.
+#### irmao(raiz)
+##### `Retorna o ponteiro que aponta para o irmão do nó inserido`
 {% highlight c %}
-Node* esquerda(Node *raiz){
+Node* irmao(Node *raiz){
 	Node *aux = raiz;
-	if (aux->esq != NULL)
-		aux = aux->esq;
-	else
-		return NULL;
-	return aux;
+	
+	if(aux == aux->pai->esq){
+		if(aux->pai->dir != NULL){
+			aux = aux->pai->dir;
+			return aux;
+		}
+		else {
+			return NULL;
+		}
+	}
+	
+	if(aux == aux->pai->dir){
+		if(aux->pai->esq != NULL){
+			aux = aux->pai->esq;
+			return aux;
+		} else {
+			return NULL;
+		}
+	}
+
 }
+
 {% endhighlight %}
 
-
-#### esquerda(raiz)
-##### Retorna o ponteiro que aponta para o filho à esquerda.
+#### criaAB(dado)
+##### Cria uma árvore binária com a raiz com o dado inserido, e a retorna.
 {% highlight c %}
-Node* esquerda(Node *raiz){
-	Node *aux = raiz;
-	if (aux->esq != NULL)
-		aux = aux->esq;
-	else
-		return NULL;
-	return aux;
+Node* criaAB(int dado)
+{
+	// Aloca memória para o novo nó.
+	Node *node = (Node*)malloc(sizeof(Node));
+	// Define o dado do nó.
+	node->dado = dado;
+	// Inicializa os filhos da esquerda e direita e o pai como NULL.
+	node->esq = NULL;
+	node->dir = NULL;
+	node->pai = NULL;
+	return node;
 }
 {% endhighlight %}
 
