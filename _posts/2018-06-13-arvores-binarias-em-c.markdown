@@ -204,6 +204,131 @@ void pos_ordem(Node *raiz){
  Para ilustrar o funcionamento desse algoritmo, vamos observar o comportamento do seu retorno quando aplicado a seguinte árvore binária:
  ![Arvores binárias exemplo 1]({{ "/assets/img/bt_example_1.jpg" | absolute_url }})
 
+#### Aplicando o algoritmo pré_ordem temos o retorno:
+ {10}
+ {7}
+ {3}
+ {2}
+ {15}
+ {2}
+ {11}
+
+#### Aplicando o algoritmo em_ordem temos o retorno:
+ {7}
+ {3}
+ {2}
+ {10}
+ {15}
+ {2}
+ {11}
+
+#### Aplicando o algoritmo pré_ordem temos o retorno:
+ {7}
+ {3}
+ {2}
+ {15}
+ {2}
+ {11}
+ {10}
+
+## Árvores binárias de busca
+
+Árvores binárias de busca são árvores binárias ordenadas de acordo com o dado que cada nó possui. Se um nó possui dado maior do que o nó pai, então ele será inserido à direita, se for menor, será inserido à esquerda, e assim, a árvore é constituída de forma ordenada.
+
+### Operações em árvores binárias de busca
+
+#### buscaAB(Node *raiz, int dado)
+##### Busca um valor específico na árvore binária de busca. Se o valor for encontrado, retorna 1, se não, retorna 0.
+{% highlight c %}
+int buscaAB(Node *raiz, int dado){
+	if (raiz->dado == dado)
+		return 1;
+	else {
+		if (dado > raiz->dado)
+			raiz = direita(raiz);
+		else
+			raiz = esquerda(raiz);
+		
+		if (raiz == NULL) return 0;
+		buscaAB(raiz, dado);
+	}
+}
+{% endhighlight %} 
+
+#### insereAB(Node *raiz, int dado)
+##### Insere um novo nó com o valor `dado` na árvore binária de busca `raiz`, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
+int insereAB(Node *raiz, int dado){
+	if (raiz -> dado == dado)
+		return 0
+	else {
+		if (dado > raiz->dado){
+			if (direita(raiz) != NULL){
+				raiz = direita(raiz);
+				insereAB(raiz, dado);
+			}
+			else {
+				filhoDir(raiz, dado);
+				return 1;
+			}
+		} else {
+			if (esquerda(raiz) != NULL){
+				raiz = esquerda(raiz);
+				insereAB(raiz, dado);
+			}
+			else {
+				filhoEsq(raiz, dado);
+				return 1;
+			}
+		}
+	}
+}
+{% endhighlight %} 
+
+#### void removeAB(Node *raiz, int dado)
+##### Remove o nó com o valor `dado` da árvore binária de busca `raiz`. 
+{% highlight c %}
+int removeAB(Node *raiz, int dado){
+	Node *pai = raiz;
+	
+	while (raiz != NULL && raiz->dado != dado){
+		pai = raiz;
+		if (dado > raiz->dado) raiz = direita(raiz);
+		else raiz = esquerda(raiz);
+	}
+	
+	if (raiz != NULL) {
+		// Se tiver duas subárvores.
+		if (esquerda(raiz) != NULL && direita(raiz) != NULL){
+			Node *aux = raiz;
+			pai = raiz;
+			raiz = direita(raiz);
+			while(esquerda(raiz) != NULL){
+				pai = raiz;
+				raiz = esquerda(raiz);
+			}
+			aux->dado = raiz->dado;
+		}
+		//É importante que esse próximo if não seja um "else if".
+		//Se tiver uma subárvore à esquerda.
+		if (esquerda(raiz) == NULL && direita(raiz) != NULL){
+			if (pai->esq == raiz) pai->esq = direita(raiz);
+			else pai->dir = direita(raiz);
+		}
+		//Se tiver uma subárvore à direita.
+		else if (esquerda(raiz) != NULL && direita(raiz) == NULL) {
+			if (pai->esq == raiz) pai->esq = esquerda(raiz);
+			else pai->dir = esquerda(raiz);
+		}
+		//Se for uma folha.
+		else if (esquerda(raiz) == NULL && direita(raiz) == NULL){
+			if (pai->esq == raiz) pai->esq = NULL;
+			else pai->dir = NULL;
+		}
+		free(raiz);
+	}
+}
+{% endhighlight %} 
+
 <!-- # Ultimate guide to static post developing
 ### Default Style
 
