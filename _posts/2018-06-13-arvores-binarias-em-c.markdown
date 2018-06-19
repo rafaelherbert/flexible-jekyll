@@ -163,13 +163,13 @@ int filhoDir(Node *raiz, int dado){
 
 ## Percorrendo árvores binárias
 
-<!-- Existem 3 diferentes métodos para percorrer uma árvore binária:
+Existem 3 diferentes métodos para percorrer uma árvore binária:
 1. Pré ordem
    - Visitar a raiz, depois a subárvore da esquerda, e logo após a subárvore da direita. 
 2. Em ordem
    - Visitar a subárvore da esquerda, depois a raiz, depois a subárvore da direita. 
 3. Pós ordem
-   - Visitar as subárvores da esquerda e direita, e depois visitar a raiz.  -->
+   - Visitar as subárvores da esquerda e direita, e depois visitar a raiz. 
 
 Vamos ver como esses códigos seriam implementados:
 
@@ -337,45 +337,3 @@ int removeAB(Node *raiz, int dado){
 	}
 }
 {% endhighlight %} 
-
-<!-- # Ultimate guide to static post developing
-### Default Style
-
-Bold: **Example** <br>
-Italic: *Example* <br>
-Bold-Italic: **_Example_** <br>
-Marked: `Example`
-
-### Code Sintax Highlight
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-### Image
-![My helpful screenshot]({{ "/assets/img/c.jpg" | absolute_url }})
-
-### Lists
-- 1
-  - 2
-    - 3
-- 2
-- 3
-
-1. 1
-2. 2
-3. 3
-
-### Blockquote
-> Hello Brother, i am Rafael Herbert
-
-
-### Link References
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/ -->
