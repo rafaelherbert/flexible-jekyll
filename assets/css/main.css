@@ -452,7 +452,7 @@ template {
   padding: 0.1rem 0.5rem;
 }
 
-.highlighter-rouge div pre code{
+div .highlighter-rouge{
   color: #ce887b;
   font-weight: 400;
   /*border: 1px solid #607D8B;*/
