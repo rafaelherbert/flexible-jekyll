@@ -160,7 +160,6 @@ int filhoDir(Node *raiz, int dado){
 }
 {% endhighlight %}
 
-
 ## Percorrendo árvores binárias
 
 Vamos ver como esses códigos seriam implementados:
