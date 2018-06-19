@@ -8,7 +8,7 @@ fig-caption: C Programming Language # (Optional)
 tags: [C, binary trees] # (Optional)
 ---
 
-As árvores binárias são uma estrutura de dados de uma quantidade finita de elementos onde o primeiro nó é chamado de **Raiz**, e os outros nós são divididos em subconjuntos distintos, onde cada um forma uma árvore binária. Cada elemento é um **Nó (ou vértice)**.
+As árvores binárias são uma estrutura de dados de uma quantidade finita de elementos onde o primeiro nó é chamado de **Raiz**, e os outros nós são divididos em subconjuntos distintos, onde cada um forma uma árvore binária. Cada elemento é um **Nó (ou vértice)**. Cada nó de uma árvore binária possui um valor e dois ponteiros, o da direita e o da esquerda, que apontam para os próximos dois nós da árvore binária.
 
 ## Terminologia
 - Pai
