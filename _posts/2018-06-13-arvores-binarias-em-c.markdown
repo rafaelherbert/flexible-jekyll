@@ -46,7 +46,8 @@ typedef struct node {
 
 #### esquerda(raiz)
 ##### Retorna o ponteiro que aponta para o filho à esquerda.
-{% highlight c %}
+
+```c
 Node* esquerda(Node *raiz){
 	Node *aux = raiz;
 	if (aux->esq != NULL)
@@ -55,7 +56,7 @@ Node* esquerda(Node *raiz){
 		return NULL;
 	return aux;
 }
-{% endhighlight %}
+``` 
 
 #### direita(raiz)
 ##### Retorna o ponteiro que aponta para o filho à direita.
