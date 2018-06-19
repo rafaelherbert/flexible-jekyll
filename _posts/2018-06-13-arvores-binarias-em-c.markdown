@@ -31,18 +31,25 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
   - Número de nós no caminho entre o nó e a raiz. (A raiz possui índice 0).
 - Altura da árvore
   - Corresponde ao nó com o maior nível.
+- Árvore Binária Estrita
+  - Um árvore binária estrita é aquela em que todo nó não folha possui filhos à esquerda e à direita (Dois filhos).
+- Árvore Binária Cheia
+  - Uma árvore binária cheia é aquela em que todas as folhas se encontram no nível d (Último nível).
+- Árvore Binária Completa
+  - Uma árvore binária cheia é aquela em que todas as folhas se encontram ou no nível d (Penúltimo nível), ou no nível d-1 (Penúltimo nível).
+
 
 ## Operações em árvores binárias
 
 #### Estrutura do nó da árvore binária
-{% highlight c %}
+```c
 typedef struct node {
   	int dado;
   	struct node *esq;
  	struct node *dir;
 	struct node *pai;
 } Node;
-{% endhighlight %}
+```
 
 #### esquerda(raiz)
 ##### Retorna o ponteiro que aponta para o filho à esquerda.
@@ -60,7 +67,7 @@ Node* esquerda(Node *raiz){
 
 #### direita(raiz)
 ##### Retorna o ponteiro que aponta para o filho à direita.
-{% highlight c %}
+```c
 Node* esquerda(Node *raiz){
 	Node *aux = raiz;
 	if (aux->dir != NULL)
@@ -69,11 +76,11 @@ Node* esquerda(Node *raiz){
 		return NULL;
 	return aux;
 }
-{% endhighlight %}
+```
 
 #### pai(raiz)
 ##### Retorna o ponteiro que aponta para o pai do nó inserido.
-{% highlight c %}
+```c
 Node* esquerda(Node *raiz){
 	Node *aux = raiz;
 	if (aux->pai != NULL)
@@ -82,12 +89,12 @@ Node* esquerda(Node *raiz){
 		return NULL;
 	return aux;
 }
-{% endhighlight %}
+```
 
 
 #### irmao(raiz)
 ##### Retorna o ponteiro que aponta para o irmão do nó inserido
-{% highlight c %}
+```c
 Node* irmao(Node *raiz){
 	Node *aux = raiz;
 	
@@ -112,11 +119,11 @@ Node* irmao(Node *raiz){
 
 }
 
-{% endhighlight %}
+```
 
 #### criaAB(dado)
 ##### Cria uma árvore binária com a raiz com o dado inserido, e a retorna.
-{% highlight c %}
+```c
 Node* criaAB(int dado)
 {
 	// Aloca memória para o novo nó.
@@ -129,11 +136,11 @@ Node* criaAB(int dado)
 	node->pai = NULL;
 	return node;
 }
-{% endhighlight %}
+```
 
 #### filhoEsq(raiz)
 ##### Cria um filho à esquerda do nó inserido, retorna 1 se conseguir e 0 se falhar.
-{% highlight c %}
+```c
 int filhoDir(Node *raiz, int dado){
 	Node *node = criaAB(dado);
 	if (raiz->esq == NULL){
@@ -144,11 +151,11 @@ int filhoDir(Node *raiz, int dado){
 		return 0;
 	}
 }
-{% endhighlight %}
+```
 
 #### filhoDir(raiz)
 ##### Cria um filho à direita do nó inserido, retorna 1 se conseguir e 0 se falhar.
-{% highlight c %}
+```c
 int filhoDir(Node *raiz, int dado){
 	Node *node = criaAB(dado);
 	if (raiz->dir == NULL){
@@ -159,7 +166,7 @@ int filhoDir(Node *raiz, int dado){
 		return 0;
 	}
 }
-{% endhighlight %}
+```
 
 
 ## Percorrendo árvores binárias
@@ -175,34 +182,34 @@ Existem 3 diferentes métodos para percorrer uma árvore binária:
 Vamos ver como esses códigos seriam implementados:
 
 #### pre_ordem(raiz)
-{% highlight c %}
+```c
 void pre_ordem(Node *raiz){
 	if (raiz == NULL) return;
 	printf("%d\n", raiz->dado);
 	pre_ordem(raiz->esq);
 	pre_ordem(raiz->dir);
 }
-{% endhighlight %}
+```
 
 #### em_ordem(raiz)
-{% highlight c %}
+```c
 void em_ordem(Node *raiz){
 	if (raiz == NULL) return;
 	pre_ordem(raiz->esq);
 	printf("%d\n", raiz->dado);
 	pre_ordem(raiz->dir);
 }
-{% endhighlight %}
+```
 
 #### pos_ordem(raiz)
-{% highlight c %}
+```c
 void pos_ordem(Node *raiz){
 	if (raiz == NULL) return;
 	pre_ordem(raiz->esq);
 	pre_ordem(raiz->dir);
 	printf("%d\n", raiz->dado);
 }
-{% endhighlight %}
+```
 
 
  Para ilustrar o funcionamento desse algoritmo, vamos observar o comportamento do seu retorno quando aplicado a seguinte árvore binária:
@@ -241,9 +248,9 @@ void pos_ordem(Node *raiz){
 
 ### Operações em árvores binárias de busca
 
-#### buscaAB(Node *raiz, int dado)
+#### buscaAB(Node \*raiz, int dado)
 ##### Busca um valor específico na árvore binária de busca. Se o valor for encontrado, retorna 1, se não, retorna 0.
-{% highlight c %}
+```c
 int buscaAB(Node *raiz, int dado){
 	if (raiz->dado == dado)
 		return 1;
@@ -257,11 +264,11 @@ int buscaAB(Node *raiz, int dado){
 		buscaAB(raiz, dado);
 	}
 }
-{% endhighlight %} 
+``` 
 
-#### insereAB(Node *raiz, int dado)
+#### insereAB(Node \*raiz, int dado)
 ##### Insere um novo nó com o valor dado na árvore binária de busca raiz, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
-{% highlight c %}
+```c
 int insereAB(Node *raiz, int dado){
 	if (raiz -> dado == dado)
 		return 0
@@ -287,11 +294,11 @@ int insereAB(Node *raiz, int dado){
 		}
 	}
 }
-{% endhighlight %} 
+``` 
 
-#### removeAB(Node *raiz, int dado)
+#### removeAB(Node \*raiz, int dado)
 ##### Remove o nó com o valor dado da árvore binária de busca raiz. 
-{% highlight c %}
+```c
 int removeAB(Node *raiz, int dado){
 	Node *pai = raiz;
 	
@@ -332,4 +339,4 @@ int removeAB(Node *raiz, int dado){
 		free(raiz);
 	}
 }
-{% endhighlight %} 
+``` 
