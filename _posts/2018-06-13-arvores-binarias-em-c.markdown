@@ -38,7 +38,12 @@ As árvores binárias são uma estrutura de dados de uma quantidade finita de el
 - Árvore Binária Completa
   - Uma árvore binária cheia é aquela em que todas as folhas se encontram ou no nível d (Penúltimo nível), ou no nível d-1 (Penúltimo nível).
 
-
+## Fórmulas
+- Toda árvore binária `estrita` com `n` folhas contém:
+  - `2n - 1` nós.
+- O número de subárvores vazia à esquerda ou à direita em uma árvore binária com `n` nós é:
+  - `n + 1`.
+  
 ## Operações em árvores binárias
 
 #### Estrutura do nó da árvore binária
