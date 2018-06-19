@@ -288,7 +288,7 @@ int insereAB(Node *raiz, int dado){
 }
 {% endhighlight %} 
 
-#### void removeAB(Node *raiz, int dado)
+#### removeAB(Node *raiz, int dado)
 ##### Remove o nó com o valor dado da árvore binária de busca raiz. 
 {% highlight c %}
 int removeAB(Node *raiz, int dado){
