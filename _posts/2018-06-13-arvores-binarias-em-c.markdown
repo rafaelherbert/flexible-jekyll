@@ -55,7 +55,8 @@ typedef struct node {
 ##### Retorna o ponteiro que aponta para o filho à esquerda.
 
 ```c
-Node* esquerda(Node *raiz){
+Node* esquerda(Node *raiz)
+{
 	Node *aux = raiz;
 	if (aux->esq != NULL)
 		aux = aux->esq;
@@ -68,7 +69,8 @@ Node* esquerda(Node *raiz){
 #### direita(raiz)
 ##### Retorna o ponteiro que aponta para o filho à direita.
 ```c
-Node* esquerda(Node *raiz){
+Node* esquerda(Node *raiz)
+{
 	Node *aux = raiz;
 	if (aux->dir != NULL)
 		aux = aux->dir;
@@ -81,7 +83,8 @@ Node* esquerda(Node *raiz){
 #### pai(raiz)
 ##### Retorna o ponteiro que aponta para o pai do nó inserido.
 ```c
-Node* esquerda(Node *raiz){
+Node* esquerda(Node *raiz)
+{
 	Node *aux = raiz;
 	if (aux->pai != NULL)
 		aux = aux->pai;
@@ -95,7 +98,8 @@ Node* esquerda(Node *raiz){
 #### irmao(raiz)
 ##### Retorna o ponteiro que aponta para o irmão do nó inserido
 ```c
-Node* irmao(Node *raiz){
+Node* irmao(Node *raiz)
+{
 	Node *aux = raiz;
 	
 	if(aux == aux->pai->esq){
@@ -141,7 +145,8 @@ Node* criaAB(int dado)
 #### filhoEsq(raiz)
 ##### Cria um filho à esquerda do nó inserido, retorna 1 se conseguir e 0 se falhar.
 ```c
-int filhoDir(Node *raiz, int dado){
+int filhoDir(Node *raiz, int dado)
+{
 	Node *node = criaAB(dado);
 	if (raiz->esq == NULL){
 		raiz->esq = node;
@@ -156,7 +161,8 @@ int filhoDir(Node *raiz, int dado){
 #### filhoDir(raiz)
 ##### Cria um filho à direita do nó inserido, retorna 1 se conseguir e 0 se falhar.
 ```c
-int filhoDir(Node *raiz, int dado){
+int filhoDir(Node *raiz, int dado)
+{
 	Node *node = criaAB(dado);
 	if (raiz->dir == NULL){
 		raiz->dir = node;
@@ -183,7 +189,8 @@ Vamos ver como esses códigos seriam implementados:
 
 #### pre_ordem(raiz)
 ```c
-void pre_ordem(Node *raiz){
+void pre_ordem(Node *raiz)
+{
 	if (raiz == NULL) return;
 	printf("%d\n", raiz->dado);
 	pre_ordem(raiz->esq);
@@ -193,7 +200,8 @@ void pre_ordem(Node *raiz){
 
 #### em_ordem(raiz)
 ```c
-void em_ordem(Node *raiz){
+void em_ordem(Node *raiz)
+{
 	if (raiz == NULL) return;
 	pre_ordem(raiz->esq);
 	printf("%d\n", raiz->dado);
@@ -203,7 +211,8 @@ void em_ordem(Node *raiz){
 
 #### pos_ordem(raiz)
 ```c
-void pos_ordem(Node *raiz){
+void pos_ordem(Node *raiz)
+{
 	if (raiz == NULL) return;
 	pre_ordem(raiz->esq);
 	pre_ordem(raiz->dir);
@@ -251,7 +260,8 @@ void pos_ordem(Node *raiz){
 #### buscaAB(Node \*raiz, int dado)
 ##### Busca um valor específico na árvore binária de busca. Se o valor for encontrado, retorna 1, se não, retorna 0.
 ```c
-int buscaAB(Node *raiz, int dado){
+int buscaAB(Node *raiz, int dado)
+{
 	if (raiz->dado == dado)
 		return 1;
 	else {
@@ -269,7 +279,8 @@ int buscaAB(Node *raiz, int dado){
 #### insereAB(Node \*raiz, int dado)
 ##### Insere um novo nó com o valor dado na árvore binária de busca raiz, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
 ```c
-int insereAB(Node *raiz, int dado){
+int insereAB(Node *raiz, int dado)
+{
 	if (raiz -> dado == dado)
 		return 0
 	else {
@@ -299,7 +310,8 @@ int insereAB(Node *raiz, int dado){
 #### removeAB(Node \*raiz, int dado)
 ##### Remove o nó com o valor dado da árvore binária de busca raiz. 
 ```c
-int removeAB(Node *raiz, int dado){
+int removeAB(Node *raiz, int dado)
+{
 	Node *pai = raiz;
 	
 	while (raiz != NULL && raiz->dado != dado){
