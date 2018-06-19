@@ -1479,13 +1479,3 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
-
-pre code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-    overflow: auto;
-    white-space: pre;
-    word-wrap: initial;
-    word-break:initial;
-}
