@@ -173,35 +173,6 @@ Existem 3 diferentes métodos para percorrer uma árvore binária:
 
 Vamos ver como esses códigos seriam implementados:
 
-#### pre_ordem(raiz)
-{% highlight c %}
-void pre_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	printf("{%d}\n", raiz->dado);
-	pre_ordem(raiz->esq);
-	pre_ordem(raiz->dir);
-}
-{% endhighlight %}
-
-#### em_ordem(raiz)
-{% highlight c %}
-void em_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	pre_ordem(raiz->esq);
-	printf("{%d}\n", raiz->dado);
-	pre_ordem(raiz->dir);
-}
-{% endhighlight %}
-
-#### pos_ordem(raiz)
-{% highlight c %}
-void pos_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	pre_ordem(raiz->esq);
-	pre_ordem(raiz->dir);
-	printf("{%d}\n", raiz->dado);
-}
-{% endhighlight %}
 
 
  Para ilustrar o funcionamento desse algoritmo, vamos observar o comportamento do seu retorno quando aplicado a seguinte árvore binária:
