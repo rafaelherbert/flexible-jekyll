@@ -265,7 +265,7 @@ int buscaAB(Node *raiz, int dado){
 {% endhighlight %} 
 
 #### insereAB(Node *raiz, int dado)
-##### Insere um novo nó com o valor `dado` na árvore binária de busca `raiz`, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
+##### Insere um novo nó com o valor dado na árvore binária de busca raiz, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
 int insereAB(Node *raiz, int dado){
 	if (raiz -> dado == dado)
 		return 0
@@ -294,7 +294,7 @@ int insereAB(Node *raiz, int dado){
 {% endhighlight %} 
 
 #### void removeAB(Node *raiz, int dado)
-##### Remove o nó com o valor `dado` da árvore binária de busca `raiz`. 
+##### Remove o nó com o valor dado da árvore binária de busca raiz. 
 {% highlight c %}
 int removeAB(Node *raiz, int dado){
 	Node *pai = raiz;
