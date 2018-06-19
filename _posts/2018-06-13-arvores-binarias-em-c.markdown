@@ -163,14 +163,6 @@ int filhoDir(Node *raiz, int dado){
 
 ## Percorrendo árvores binárias
 
-Existem 3 diferentes métodos para percorrer uma árvore binária:
-- Pré ordem
-  - Visitar a raiz, depois a subárvore da esquerda, e logo após a subárvore da direita. 
-- Em ordem
-  - Visitar a subárvore da esquerda, depois a raiz, depois a subárvore da direita. 
-- Pós ordem
-  - Visitar as subárvores da esquerda e direita, e depois visitar a raiz. 
-
 Vamos ver como esses códigos seriam implementados:
 
 #### pre_ordem(raiz)
