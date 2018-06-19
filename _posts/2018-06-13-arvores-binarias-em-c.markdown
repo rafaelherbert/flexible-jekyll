@@ -189,6 +189,7 @@ int buscaAB(Node *raiz, int dado){
 
 #### insereAB(Node *raiz, int dado)
 ##### Insere um novo nó com o valor dado na árvore binária de busca raiz, retorna 1 no sucesso, e 0 se um nó com o mesmo valor já estiver alocado.
+{% highlight c %}
 int insereAB(Node *raiz, int dado){
 	if (raiz -> dado == dado)
 		return 0
