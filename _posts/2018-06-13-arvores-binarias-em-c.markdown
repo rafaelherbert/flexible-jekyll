@@ -208,37 +208,31 @@ void pos_ordem(Node *raiz){
  ![Arvores binárias exemplo 1]({{ "/assets/img/bt_example_1.jpg" | absolute_url }})
 
 #### Aplicando o algoritmo pré_ordem temos o retorno:
-{% highlight %}
-{10}
-{7}
-{3}
-{2}
-{15}
-{2}
-{11}
-{% endhighlight %}
+10<br>
+7<br>
+3<br>
+2<br>
+15<br>
+2<br>
+11<br>
 
 #### Aplicando o algoritmo em_ordem temos o retorno:
-{% highlight %}
-{7}
-{3}
-{2}
-{10}
-{15}
-{2}
-{11}
-{% endhighlight %}
+7<br>
+3<br>
+2<br>
+10<br>
+15<br>
+2<br>
+11<br>
 
 #### Aplicando o algoritmo pré_ordem temos o retorno:
-{% highlight %}
-{7}
-{3}
-{2}
-{15}
-{2}
-{11}
-{10}
-{% endhighlight %}
+7<br>
+3<br>
+2<br>
+15<br>
+2<br>
+11<br>
+10
 
 ## Árvores binárias de busca
 
