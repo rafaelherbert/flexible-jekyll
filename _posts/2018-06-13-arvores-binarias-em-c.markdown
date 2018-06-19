@@ -161,78 +161,7 @@ int filhoDir(Node *raiz, int dado){
 {% endhighlight %}
 
 
-## Percorrendo árvores binárias
 
-Existem 3 diferentes métodos para percorrer uma árvore binária:
-1. Pré ordem
-   - Visitar a raiz, depois a subárvore da esquerda, e logo após a subárvore da direita. 
-2. Em ordem
-   - Visitar a subárvore da esquerda, depois a raiz, depois a subárvore da direita. 
-3. Pós ordem
-   - Visitar as subárvores da esquerda e direita, e depois visitar a raiz. 
-
-Vamos ver como esses códigos seriam implementados:
-
-#### pre_ordem(raiz)
-{% highlight c %}
-void pre_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	printf("{%d}\n", raiz->dado);
-	pre_ordem(raiz->esq);
-	pre_ordem(raiz->dir);
-}
-{% endhighlight %}
-
-#### em_ordem(raiz)
-{% highlight c %}
-void em_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	pre_ordem(raiz->esq);
-	printf("{%d}\n", raiz->dado);
-	pre_ordem(raiz->dir);
-}
-{% endhighlight %}
-
-#### pos_ordem(raiz)
-{% highlight c %}
-void pos_ordem(Node *raiz){
-	if (raiz == NULL) return;
-	pre_ordem(raiz->esq);
-	pre_ordem(raiz->dir);
-	printf("{%d}\n", raiz->dado);
-}
-{% endhighlight %}
-
-
- Para ilustrar o funcionamento desse algoritmo, vamos observar o comportamento do seu retorno quando aplicado a seguinte árvore binária:
- ![Arvores binárias exemplo 1]({{ "/assets/img/bt_example_1.jpg" | absolute_url }})
-
-#### Aplicando o algoritmo pré_ordem temos o retorno:
-10<br>
-7<br>
-3<br>
-2<br>
-15<br>
-2<br>
-11<br>
-
-#### Aplicando o algoritmo em_ordem temos o retorno:
-7<br>
-3<br>
-2<br>
-10<br>
-15<br>
-2<br>
-11<br>
-
-#### Aplicando o algoritmo pré_ordem temos o retorno:
-7<br>
-3<br>
-2<br>
-15<br>
-2<br>
-11<br>
-10
 
 ## Árvores binárias de busca
 
