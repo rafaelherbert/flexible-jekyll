@@ -1487,7 +1487,7 @@ a.newer-posts:hover {
 }
 
 .highlight pre {
-  overflow-x: auto;       // this sets the scrolling in x
+  overflow-x: scroll;       // this sets the scrolling in x
 }
 
 .highlight pre code {
